@@ -1,0 +1,30 @@
+{
+  "name": "drinking-alone",
+  "version": "0.0.1",
+  "description": "Drinking Alone In a (dot) Bar",
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PSDoff/drinking-alone.git"
+  },
+  "author": "Alex Somerville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PSDoff/drinking-alone/issues"
+  },
+  "homepage": "https://github.com/PSDoff/drinking-alone",
+  "devDependencies": {
+    "gulp-uglify": "~1.1.0",
+    "gulp": "~3.8.11",
+    "gulp-jshint": "~1.10.0",
+    "gulp-concat": "~2.5.2",
+    "gulp-sass": "~1.3.3",
+    "gulp-sourcemaps": "~1.5.1",
+    "gulp-autoprefixer": "~2.1.0",
+    "rename": "~1.0.3",
+    "gulp-minify-css": "~1.0.0",
+    "gulp-livereload": "~3.8.0"
+  }
+}
