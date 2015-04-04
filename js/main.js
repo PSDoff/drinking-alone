@@ -90,7 +90,7 @@ var token;
                         venues[i]['venue']['location']['lng']
                     );
                     /* Build icon for each icon */
-                    var myIcon = L.divIcon({className: 'drinking-alone-marker'});
+                    var myIcon = L.divIcon({className: 'drinking-alone-marker'}); 
 
                     var marker = new L.Marker(latLng, {icon: myIcon})
                     .bindPopup(venues[i]['venue']['name'], { closeButton: false })

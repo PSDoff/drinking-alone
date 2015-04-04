@@ -57,7 +57,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./css'))
     .pipe(minifycss())
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./css')) 
     .pipe(livereload())
     ;
 });
