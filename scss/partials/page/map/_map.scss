@@ -1,0 +1,11 @@
+.leaflet-marker-icon {
+    background: url(https://foursquare.com/img/pin-blue-transparent.png);
+    padding: 6px;
+    padding-bottom: 17px;
+    top: -6px;
+    left: -6px;
+}
+
+#map_canvas{
+    position:absolute; top:0; bottom:0; width:100%;
+}

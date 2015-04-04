@@ -11,10 +11,13 @@
         <!-- Place favicon.ico in the root directory -->
 
         <!-- drinking-alone.css includes normalize and some html5boilerplate -->
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
         <link rel="stylesheet" href="css/drinking-alone.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="build/app.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -24,10 +27,22 @@
             <h1 class="logo">Drinking Alone in a (dot) Bar</h1>
         </header>
 
+        <section id="map" class="outer-container">
+            <section class="inner-container">
+                <div style="width: 100%; height: 100%;" id="map_canvas"></div>
+            </section>
+        </section>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <!-- CDN sources -->
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+        <!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> -->
+
+        <script src="build/plugins.js"></script>
+        <script src="build/app.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

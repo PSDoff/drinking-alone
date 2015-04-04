@@ -1,6 +1,7 @@
 var package = require('./package.json');
 
 var options = {};
+
 options.sass = {
     errLogToConsole: true,
     sourceMap: 'sass',
@@ -28,12 +29,23 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     livereload = require('gulp-livereload');
 
-gulp.task('js', function () {
+gulp.task('js-custom', function () {
     return gulp.src('js/*.js')
+    .pipe(sourcemaps.init())
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(uglify())
     .pipe(concat('app.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('js-plugins', function () {
+    return gulp.src('js/plugins/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(concat('/plugins.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('build'));
 });
 
@@ -53,6 +65,8 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     livereload.listen();
     gulp.watch('scss/**/*.scss', ['sass']);
+    gulp.watch('js/*.js', ['js-custom']);
+    gulp.watch('js/plugins/**/*.js', ['js-plugins']);
 });
 
 gulp.on('err', function(err){
