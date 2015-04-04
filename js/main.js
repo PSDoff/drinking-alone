@@ -65,7 +65,7 @@ var token;
             authUrl: 'https://foursquare.com/',
             apiUrl: 'https://api.foursquare.com/'
         };
-        
+
 
         /* HTML 5 geolocation. */
         navigator.geolocation.getCurrentPosition(function(data) {
@@ -90,16 +90,9 @@ var token;
                         venues[i]['venue']['location']['lng']
                     );
                     /* Build icon for each icon */
-                    var icon = venues[i]['venue']['categories'][0]['icon'];
-                    // var leafletIcon = L.Icon.extend({
-                    //     iconUrl: fsqIcon['prefix'] + '32' + fsqIcon['suffix'],
-                    //     shadowUrl: null,
-                    //     iconSize: new L.Point(32,32),
-                    //     iconAnchor: new L.Point(16, 41),
-                    //     popupAnchor: new L.Point(0, -51)
-                    // });
-                    // var icon = new leafletIcon();
-                    var marker = new L.Marker(latLng, {icon: icon})
+                    var myIcon = L.divIcon({className: 'drinking-alone-marker'});
+
+                    var marker = new L.Marker(latLng, {icon: myIcon})
                     .bindPopup(venues[i]['venue']['name'], { closeButton: false })
                     .on('mouseover', function(e) { this.openPopup(); })
                     .on('mouseout', function(e) { this.closePopup(); });
