@@ -65,6 +65,7 @@ var token;
             authUrl: 'https://foursquare.com/',
             apiUrl: 'https://api.foursquare.com/'
         };
+        
 
         /* HTML 5 geolocation. */
         navigator.geolocation.getCurrentPosition(function(data) {
